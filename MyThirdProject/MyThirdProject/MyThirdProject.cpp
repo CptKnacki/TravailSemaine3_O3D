@@ -206,3 +206,167 @@ int main()
 //!
 
 
+//correction//
+/*
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+const int mapSize = 6;
+const char exitValue = 's', player = 'p', enter = 'e', walls = '#', path = ' ';
+char currentInput = 'a';
+
+string map[mapSize] =
+{
+    "#######S#######",
+    "##   ## ##  ###",
+    "## ####    ####",
+    "##     ### ####",
+    "######     ####",
+    "##P    ########",
+}
+
+bool Init();
+void Display();
+void GameLoop();
+void ReadInput();
+void GetInputValue();
+bool GetNextMove(int _x, int _y);
+
+bool Init()
+{
+    bool find = false;
+    for(int i = 0; i < mapSize; i++)
+    {
+        int length = map[y].lentgh();
+        for(int y = 0 ; y < length; y++)
+        {
+            if(map[i][y] == 'e')
+            {
+                currentY = y;
+                currentX = x;
+                find = true;
+            }
+        }
+    }
+}
+
+void Display()
+{
+   for(int i = 0; i < mapSize; i++)
+    {
+       int length = map[y].length();
+       for(int y = 0; y < length; y++)
+        {
+            if (currentX == x && currentY == y)
+                cout << player;
+            else cout << map[y][x];
+        }
+        cout << endl;
+    }
+}
+
+void GameLoop()
+{
+    while(map[currentY][currentX] == != exitValue)
+    {
+        system("CLS");
+        Display();
+    }
+
+}
+
+void ReadInput()
+{
+    bool isValidInput = false;
+    cout << "Choose direction" << endl;
+    while(!isValidInput)
+    {
+        cin currentInput;
+        currentInput = to_lower(currentInput);
+        IsValidInput = (currentInput == 'z' ||currentInput == 'q' ||currentInput == 's' ||currentInput == 'd');
+    }
+}
+
+bool GetNextMove(int _x, int _y)
+{
+    bool _yOutOfRange = _y < 0 || _y > mapSize;
+    bool _xOutOfRange = _x < 0 || _x > map[_y].length;
+
+    if(_yOutOfRange ||_xOutOfRange) return false;
+    return map[_y][_x] != wall;
+
+}
+
+void GetInputValue()
+{
+    if(currentInput == 'z' && GetNextMove(currentY - 1, currentX))
+        currentY--;
+    else if (currentInput == 's' && GetNextMove(currentY + 1, currentX))
+        currentY++;
+    else if (currentInput == 'q' && GetNextMove(currentY, currentX - 1))
+        currentX--;
+    else if (currentInput == 'd' && GetNextMove(currentY, currentX + 1))
+        currentX++;
+
+}
+int main()
+{
+    SetConsoleOutpuCp(CP_UTF8);
+    if(!Init())
+    {
+        return -2;
+    }
+    GameLoop();
+    system("CLS");
+    cout << "felicitations !" << endl;
+
+    return 0;
+}
+
+char** t = new char* [10];
+for (int i = 0 ; i < 10 ; i++)
+{
+    t[i] = new char(0);
+}
+
+delete[] t;
+
+
+class A
+{
+   private:
+   string name = "";
+   public:
+   A() = default;
+
+   A(string _name)
+   {
+    name = _name;
+   }
+
+   string Name()
+   {
+    return name;
+   }
+};
+
+class B : public A
+{
+   public:
+   
+   B()
+   {
+    name = "Bibi";
+   }
+};
+
+int main()
+{
+    A a("Toto");
+    B b;
+    // b.name;
+    cout << a.Name();
+}
+*/
