@@ -369,4 +369,40 @@ int main()
     // b.name;
     cout << a.Name();
 }
+
+class Entity
+{
+    private:
+        string name = "";
+    public:
+        string Name()
+        {
+            return name;
+        }
+        Entity()
+        {}
+        ~Entity()
+        {}
+};
+
+
+class Player : public Entity
+{
+    private:
+        string nickName;
+        int age;
+        Entity* ent = new Entity();
+    public:
+        Player(const Player& _player)
+        {
+            nickName = _player.nickName;
+            age = _player.age;
+            ent = _player.ent;
+        }
+        ~Player()
+        {
+            delete ent;
+        }
+};
+
 */
