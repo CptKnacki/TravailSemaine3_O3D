@@ -77,11 +77,6 @@ class Liste
         {
             return tab[_index];
         }
-
-
-
-
-
 };
 
 int main()
@@ -99,5 +94,3 @@ int main()
     std::cout << std::endl << list2.GetLast() << std::endl;
     std::cout << list2.GetFirst() << std::endl;
 }
-
-                             

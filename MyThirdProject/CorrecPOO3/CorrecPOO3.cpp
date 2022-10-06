@@ -31,7 +31,7 @@ public:
         for (T _item : _tab)
         {
             tab[index] = _item;
-            _index++;
+            index++;
         }
     }
 
