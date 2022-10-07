@@ -23,5 +23,8 @@ public:
 public:
 	void InitMessages();
 	std::string GetMessage(const std::string& _key) const;
+	void AddMessageToFile(const std::string& key, const std::string& _message);
+	std::string LanguageName() const;
+	std::string FilePath() const;
 };
 
