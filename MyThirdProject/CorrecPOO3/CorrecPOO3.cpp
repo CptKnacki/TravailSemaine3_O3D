@@ -90,9 +90,6 @@ public:
 };
 
 
-
-
-
 int main()
 {
     Array<int> _tab1 = Array<int>(10);
