@@ -4,12 +4,12 @@
 class Exemple
 {
 private:
-	std::string name = "";
+	std::string name = "Luigi";
 	Exemple* next = nullptr;
 
 public:
 	// Constructor and Destructor //
-	Exemple(){ name = "Luigi"; }
+	Exemple() = default;
 	Exemple(const Exemple& _copy) { name = _copy.name; next = _copy.next; }
 	~Exemple(){ delete next; next = nullptr; }
 

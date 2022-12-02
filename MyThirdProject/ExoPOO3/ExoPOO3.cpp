@@ -53,12 +53,11 @@ class Liste
         void Resize(int _count)
         {
             T* _tempTab = tab;
-      
             tab = new T[_count];
+      
             for (int i = 0; i < count; i++)
-            {
                 tab[i] = _tempTab[i];
-            }
+            
             count = _count;
         }
 
@@ -66,10 +65,7 @@ class Liste
         void Display()
         {
             for (int i = 0; i < count; i++)
-            {
                 std::cout << tab[i] << " ";
-            }
-
         }
 
         // Operator Method //

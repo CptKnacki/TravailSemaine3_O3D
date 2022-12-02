@@ -15,6 +15,7 @@ private:
 public:
 
 	// Constructor of the nod class //
+	Nods() = default;
 	Nods(int _i, Nods* _ptrListe = nullptr) { data = _i; next = _ptrListe; }
 
 	// Methods to access and set the attributes to a new value //
@@ -36,14 +37,27 @@ public:
 	// Default constructor of Liste //
 	Liste() = default;
 
-	/*
-	Liste()
+	
+	Liste(std::initializer_list<Nods> _nodsList)
 	{
-		
+		int _nodsNumber = 0;
 
+		for (Nods _nods : _nodsList)
+			_nodsNumber++;
 
+		Nods* _temp = new Nods[_nodsNumber];
+
+		_nodsNumber = 0;
+
+		for (Nods _nods : _nodsList)
+		{
+			_temp[_nodsNumber] = _nods;
+			_nodsNumber++;
+		}
+
+		nods = _temp;
 	};
-	*/
+	
 
 	// Method used to add at the first position //
 	void AddFirst(int _i)

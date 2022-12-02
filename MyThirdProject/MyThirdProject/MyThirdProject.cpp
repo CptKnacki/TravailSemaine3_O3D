@@ -104,6 +104,7 @@ void MovePlayerPosition()
 
         if (theNewString[actualXposition - 1] != '#')
             theNewString[actualXposition - 1] = ' ';
+
         theNewString[actualXposition] = 'P';
     }
     else
